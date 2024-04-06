@@ -9,7 +9,7 @@ const Users = () => {
     data: users,
     refetch,
   } = useQuery("users", () =>
-    fetch(`http://localhost:5001/user`, {
+    fetch(`https://doctors-portal-backend-77ze.onrender.com/user`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

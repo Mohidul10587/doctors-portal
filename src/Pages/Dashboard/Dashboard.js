@@ -17,7 +17,6 @@ const Dashboard = () => {
           className="drawer-toggle"
         />
         <div className="drawer-content ">
-          <h1 className="text-3xl text-purple-500 ml-4">Dashboard</h1>
           <Outlet></Outlet>
         </div>
         <div className="drawer-side mt-10">

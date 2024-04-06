@@ -1,32 +1,28 @@
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect } from "react";
 
 const useAdmin = (user) => {
-    const [admin, setAdmin] = useState(false)
-    const [adminLoading , setAdminLoading] = useState(true);
-    useEffect(() => {
-        const email = user?.email
+  const [admin, setAdmin] = useState(false);
+  const [adminLoading, setAdminLoading] = useState(true);
+  useEffect(() => {
+    const email = user?.email;
 
-        if (email) {
-            fetch(`http://localhost:5001/admin/${email}`, {
-                method: 'GET',
-                headers: {
-                    'content-type': 'application/json',
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            })
-                .then(res => res.json())
-                .then(data => {
+    if (email) {
+      fetch(`https://doctors-portal-backend-77ze.onrender.com/admin/${email}`, {
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setAdmin(data.admin);
+          setAdminLoading(false);
+        });
+    }
+  }, [user]);
 
-                    setAdmin(data.admin)
-                    setAdminLoading(false)
-                })
-        }
+  return [admin, adminLoading];
+};
 
-    }, [user])
-
-    return [admin , adminLoading]
-
-}
-
-export default useAdmin
+export default useAdmin;
