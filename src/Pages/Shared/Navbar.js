@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-gray-700 px-8 text-white font-bold fixed z-30">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown ">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">{menu}</ul>
+        <ul className="menu menu-horizontal p-0 bg-gray-900 text-white">
+          {menu}
+        </ul>
       </div>
       <div className="navbar-end">
         <label
