@@ -65,9 +65,12 @@ const AddDoctor = () => {
   if (isLoading) return <p>Loading</p>;
 
   return (
-    <div className="pt-24">
+    <div className="mt-4 ml-2 border border-gray-800 rounded-md w-">
       <h1>add a doctor</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="border border-gray-800"
+      >
         <div className="form-control w-full max-w-xs">
           <label className="label">
             <span className="label-text">Name</span>

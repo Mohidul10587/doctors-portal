@@ -9,17 +9,17 @@ const Dashboard = () => {
   const [admin] = useAdmin(user);
 
   return (
-    <div className="pt-24">
+    <div className="pt-">
       <div className="drawer drawer-mobile">
         <input
           id="dashboard-sidebar"
           type="checkbox"
           className="drawer-toggle"
         />
-        <div className="drawer-content ">
+        <div className="drawer-content mt-14 ml-1">
           <Outlet></Outlet>
         </div>
-        <div className="drawer-side mt-10">
+        <div className="drawer-side">
           <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
           <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}

@@ -20,7 +20,7 @@ const Users = () => {
   if (isLoading) return <Loading></Loading>;
 
   return (
-    <div className=" mim-h-screen">
+    <div className="mt-4 ml-2">
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead className="border-[1px] border-gray-800">
