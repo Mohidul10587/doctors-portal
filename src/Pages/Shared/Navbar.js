@@ -19,31 +19,31 @@ const Navbar = () => {
 
   const menu = (
     <>
-      <li>
+      <li className="bg-gray-900 text-white">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="bg-gray-900 text-white">
         <Link to="/appointment">Appointment</Link>
       </li>
 
-      <li>
+      <li className="bg-gray-900 text-white">
         <Link to="/contact">Contact</Link>
       </li>
 
       {user && (
-        <li>
+        <li className="bg-gray-900 text-white">
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
 
       {user ? (
-        <li>
+        <li className="bg-gray-900 text-white">
           <p className="" onClick={signedOut}>
             Sign Out
           </p>
         </li>
       ) : (
-        <li>
+        <li className="bg-gray-900 text-white">
           <Link to="/login">Login</Link>
         </li>
       )}
